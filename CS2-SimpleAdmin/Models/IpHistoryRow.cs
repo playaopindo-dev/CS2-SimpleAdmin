@@ -9,6 +9,6 @@ public sealed class IpHistoryRow
 
     public ulong Steamid => Convert.ToUInt64(steamid);
     public string? Name => name;
-    public uint Address => Convert.ToUInt32(address);
+    public uint Address => unchecked((uint)address);
     public DateTime Used_at => used_at;
 }
